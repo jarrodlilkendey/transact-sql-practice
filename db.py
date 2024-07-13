@@ -4,7 +4,7 @@ from dotenv import load_dotenv
 
 load_dotenv() 
 
-DRIVER_NAME = 'SQL SERVER'
+DRIVER_NAME = os.environ.get('DRIVER_NAME', 'SQL SERVER')
 DATABASE_SERVER_NAME = os.environ.get('DATABASE_SERVER_NAME')
 DATABASE_NAME = os.environ.get('DATABASE_NAME')
 

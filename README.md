@@ -9,27 +9,24 @@ Built with Streamlit
 ### Setup Tasks
 
 - Run a local instance of Microsoft SQL Server
-- Create a User - https://learn.microsoft.com/en-us/sql/relational-databases/security/authentication-access/create-a-database-user?view=sql-server-ver16
-- Store there credentials in a secrets file
-- Login with that user
-- Run the DB setup scripts
+- Populate DATABASE_SERVER_NAME and DATABASE_NAME into an .env file
 
-### Running in virtual environment
+### Running in a python virtual environment
 
 ```
 python -m venv .venv (first time only)
 .venv\Scripts\Activate.ps1
 pip install -r requirements.txt
 streamlit run app.py
-deactivate
 visit http://localhost:8501/
+deactivate (when done)
 ```
 
 ### Running via Docker
 
 ```
 docker build -t streamlit .
-docker run -p 8501:8501 streamlit
+docker run -p 8501:8501 --env-file .env streamlit
 visit http://localhost:8501/
 ```
 
