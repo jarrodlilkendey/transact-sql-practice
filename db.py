@@ -18,3 +18,12 @@ def connect_db():
 
     connection = odbc.connect(connection_string)
     return connection
+
+def execute_query(connection, query):
+    with connection.cursor() as cur:
+        cur.execute(query) 
+
+def execute_query_fetchall(connection, query):
+    with connection.cursor() as cur:
+        cur.execute(query)
+        return cur.fetchall()

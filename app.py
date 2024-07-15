@@ -18,11 +18,11 @@ def run_query(query):
         cur.execute(query)
         return cur.fetchall()    
 
-rows = run_query(read_query_from_file('./sql/1-select-all-players.sql'))
+rows = run_query(read_query_from_file('./sql/3-select-all-population-data.sql'))
 
 # Print results.
 if rows != None:
     for row in rows:
-        st.write(f"{row[0]}, {row[1]}, {row[2]}")
+        st.write(f"{row[0]}, {row[1]}, {row[2]}, {row[3]}")
 else:
     st.write("No data")

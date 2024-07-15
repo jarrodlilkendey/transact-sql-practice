@@ -11,6 +11,13 @@ Built with Streamlit
 - Run a local instance of Microsoft SQL Server
 - Populate DATABASE_SERVER_NAME and DATABASE_NAME into an .env file
 
+### Data
+
+- https://nubela.co/proxycurl/linkedin
+- https://nubela.co/proxycurl/docs#search-api-person-search-endpoint
+- https://nubela.co/proxycurl/docs#people-api-person-profile-endpoint
+- I want to get a list of people with a software background tech in Victoria. Break it down by common tech jobs. Identify large employers. Identify skills and skill gaps.
+
 ### Running in a python virtual environment
 
 ```
